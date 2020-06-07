@@ -1,0 +1,42 @@
+﻿body {
+    background-color: blanchedalmond;
+    width: 700px;
+}
+.content {
+    width:980px;
+    margin: 0 auto;
+    height:900px;
+    background-color: #fcf5e9;
+}
+.rnavbar {
+    background-color: blanchedalmond;
+    margin: 0 auto;
+}
+h1{
+    font-family:'Times New Roman', Times, serif;
+    padding: 10px;
+}
+article {
+    height: 515px;
+    padding: 15px;
+    overflow: auto;
+}
+footer{
+    margin-bottom: 0px;
+    height: 50px;
+    padding: 10px;
+    font-size: 12px;
+    text-align:center
+}
+table {
+    margin-left: 50px;
+    
+}
+.addRecipeInput {
+    width: 250px;
+    display:inline-block;
+}
+.input-validation-error{
+    border-color:red;
+    background-color:#fee;
+}

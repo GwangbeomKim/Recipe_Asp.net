@@ -1,0 +1,17 @@
+﻿@model RecipeListViewModel
+@{
+    ViewData["Title"] = "List";
+}
+
+
+
+<div class="container">
+    <h2>List of Recipes</h2>
+
+    @foreach (var r in Model.Recipes)
+    {
+        <p><a class="list-group-item list-group-item-action" asp-action="ViewRecipe" asp-controller="Recipes" asp-route-RecipeId="@r.RecipeId">@r.RecipeName</a></p>
+    }
+
+    @Html.Partial("Pagination", Model)
+</div>

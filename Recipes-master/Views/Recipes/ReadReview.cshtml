@@ -1,0 +1,40 @@
+﻿@model RecipeReviewsViewModel
+@{
+    ViewData["Title"] = "ReviewRecipe";
+}
+
+
+<div class="container">
+
+    <h2>Recipe Review</h2>
+    <h4>@Model.Recipe.RecipeName</h4>
+    <table class="table table-striped">
+        <thead>
+        <th>Rating</th>
+        <th>Description</th>
+        <th> Stars</th>
+        </th>
+        @foreach (var r in Model.Reviews)
+        {
+            <tr>
+                <td>@r.Rating</td>
+                <td>@r.Description</td>
+                <td>
+                    @for (var j = 0; j < @r.Rating; j++)
+                    {
+
+                        <span class="fa fa-star checked"></span>
+                    }
+
+                    @for (var i = @r.Rating; i < 5; i++)
+                    {
+                        <span class="fa fa-star"></span>
+                    }
+                </td>
+            </tr>
+        }
+    </table>
+
+    </div>
+
+

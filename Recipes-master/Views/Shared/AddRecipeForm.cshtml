@@ -1,0 +1,22 @@
+﻿@model Recipe
+
+    <form asp-action="AddRecipe" method="post">
+        <fieldset>
+            <h4>Name your recipe</h4>
+            <input class="addRecipeInput form-control" asp-for="RecipeName" />
+            <h5>Preparation Time</h5>
+            <input class="addRecipeInput form-control" asp-for="TimeToPrepare" />
+        </fieldset>
+        <fieldset>
+            <legend>Ingredients</legend>
+            <textarea class="addRecipeInput form-control" rows="5" cols="50" asp-for="Ingredients" />
+
+        </fieldset>
+        <fieldset>
+            <legend>Preparation</legend>
+            <textarea class="addRecipeInput form-control" rows="5" cols="50" asp-for="Instructions" />
+        </fieldset>
+        <button type="submit">Save Recipe</button>
+        <button type="reset">Clear</button>
+        <button asp-action="Home">Cancel</button>
+    </form>

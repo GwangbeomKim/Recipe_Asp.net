@@ -1,0 +1,39 @@
+﻿@model IEnumerable<Recipe>
+@{
+    ViewData["Title"] = "ViewRecipe";
+}
+@foreach (var r in Model)
+{
+    <body>
+
+        <div class="container">
+
+            <div class="table-responsive">
+                <table class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>Id</th>
+                            <th>Name</th>
+                            <th>Time to Prepare</th>
+                            <th>Ingredients</th>
+                            <th>Instructions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>@r.RecipeId</td>
+                            <td>@r.RecipeName</td>
+                            <td>@r.TimeToPrepare</td>
+                            <td>@r.Ingredients</td>
+                            <td>@r.Instructions</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <a class="btn btn-primary" asp-action="AddReview" asp-route-RecipeId="@r.RecipeId">Review this recipe</a>
+                <a class="btn btn-primary" asp-action="ReadReview" asp-route-RecipeId="@r.RecipeId">Read Reviews</a>
+            </div>
+
+        </div>
+        
+    </body>
+}
